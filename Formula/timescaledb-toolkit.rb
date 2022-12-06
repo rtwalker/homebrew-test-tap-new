@@ -5,6 +5,12 @@ class TimescaledbToolkit < Formula
   sha256 "491c1a97739cb1608c3ae44d42878715c9c513e30bd5788b29d61884a96c86a9"
   head "https://github.com/timescale/timescaledb-toolkit.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/rtwalker/homebrew-test-tap-new/releases/download/timescaledb-toolkit-1.12.1"
+    sha256 cellar: :any, monterey: "1ca3c3ab95e2002eabc5e7940b029888656741999a061aaaa297544eb1c97516"
+    sha256 cellar: :any, big_sur:  "cd920e8d75c803d94f38803cffdae4eaec5320a38d77f98df7ea72dc2391cc58"
+  end
+
   depends_on "rust" => :build
   depends_on "rustfmt" => :build
   depends_on "postgresql@14"
